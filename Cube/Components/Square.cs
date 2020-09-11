@@ -5,6 +5,9 @@ using Cube.Enums;
 
 namespace Cube.Components
 {
+    /// <summary>
+    /// Represents the smaller squares of a surface on the cube
+    /// </summary>
     public class Square
     {
         public SquareColor Color { get; }

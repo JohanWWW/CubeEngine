@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Cube.Enums
 {
+    /// <summary>
+    /// Instruction on which part of the cube that should be turned
+    /// </summary>
     public enum CubeNotation
     {
         /// <summary>

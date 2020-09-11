@@ -29,12 +29,20 @@ namespace Cube
             _settings = settings;
         }
 
+        /// <summary>
+        /// Makes either one or multiple moves on cube according to the given notation list
+        /// </summary>
+        /// <param name="notations">List of notations which provides instructions on which parts of the cube that should be turned</param>
         public void Move(params CubeNotation[] notations)
         {
             foreach (CubeNotation notation in notations)
                 Move(notation);
         }
 
+        /// <summary>
+        /// Makes one move on cube according to given notation
+        /// </summary>
+        /// <param name="notation">A single notation which provides an instruction on which part of the cube that should be turned</param>
         public void Move(CubeNotation notation)
         {
             const int size = 3;
@@ -202,6 +210,10 @@ namespace Cube
             }
         }
 
+        /// <summary>
+        /// Retrieves a surface of the cube that matches given facement
+        /// </summary>
+        /// <param name="facing">Facement of surface to return</param>
         public Surface GetSurface(SurfaceFacing facing) => _surfaces[facing];
     }
 }

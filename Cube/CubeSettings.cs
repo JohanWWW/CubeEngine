@@ -5,6 +5,9 @@ using Cube.Enums;
 
 namespace Cube
 {
+    /// <summary>
+    /// Provides settings to the cube which are applied on instantiation of <see cref="Cube"/>
+    /// </summary>
     public class CubeSettings
     {
         public SquareColor FrontColor { get; set; } = SquareColor.Green;

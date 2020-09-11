@@ -29,6 +29,10 @@ namespace Cube.Components
                 }
         }
 
+        /// <summary>
+        /// Rotates a part of the cube according to given instruction
+        /// </summary>
+        /// <param name="rotate"></param>
         public void Rotate(SurfaceRotation rotate)
         {
             int sideLength = Matrix.SideLength;
