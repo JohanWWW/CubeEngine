@@ -7,10 +7,10 @@ With this library it is possible to create your own 3x3x3 puzzles in e.g. Unity.
 ![Diagram describing the frequently used terms in this project](/Images/CubeEngineTermsDiagram.png)
 *Diagram describing the frequently used terms in this project*
 
-Relationships:
-- A cube has surfaces. 
-- A surface contains a square matrix. 
-- A square matrix contains squares.
+**Relationships (top-down)**
+- ONE cube has MANY surfaces. 
+- ONE surface contains ONE square matrix. 
+- ONE square matrix contains MANY squares.
 
 ## Usage
 
@@ -93,6 +93,13 @@ var front = cube.GetSurface(SurfaceFacing.Fourth);
 
 // Get the center piece
 var centerPiece = front[1, 1];
+
+// Get top right piece
+var topRightPiece = front[2, 0];
 ```
-## Cube Mapping
-(in progress)
+## Mapping
+The square matrices are mapped according to the diagram below.
+![Diagram showing how matrices are mapped on the cube](/Images/CubeEngineCubeMapping.png)
+*Diagram showing how matrices are mapped on the cube*
+
+Opposite matrices are mirrored projections of each other except top and bottom which are horizontally and vertically flipped projections. Matrices always remain stationary.
